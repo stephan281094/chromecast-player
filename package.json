@@ -1,0 +1,20 @@
+{
+  "name": "osx-chromecast-player",
+  "version": "1.0.0",
+  "description": "An OSX menu bar application to control ChromeCast playback with.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephan281094/chromecast-player.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephan281094/chromecast-player/issues"
+  },
+  "homepage": "https://github.com/stephan281094/chromecast-player#readme"
+}
