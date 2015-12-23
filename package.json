@@ -4,7 +4,8 @@
   "description": "An OSX menu bar application to control ChromeCast playback with.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-packager . ChromeCastPlayer --platform=darwin --arch=x64 --version=0.36.0 --icon=Icon.icns",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/stephan281094/chromecast-player/issues"
   },
-  "homepage": "https://github.com/stephan281094/chromecast-player#readme"
+  "homepage": "https://github.com/stephan281094/chromecast-player#readme",
+  "devDependencies": {
+    "electron-packager": "^5.2.0",
+    "electron-prebuilt": "^0.36.1"
+  },
+  "dependencies": {
+    "menubar": "^3.0.0"
+  }
 }
