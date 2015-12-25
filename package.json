@@ -1,28 +1,29 @@
 {
   "name": "osx-chromecast-player",
   "version": "1.0.0",
-  "description": "An OSX menu bar application to control ChromeCast playback with.",
+  "description": "An OSX menubar app to control ChromeCast playback with.",
   "main": "index.js",
   "scripts": {
-    "build": "electron-packager . ChromeCastPlayer --platform=darwin --arch=x64 --version=0.36.0 --icon=Icon.icns",
-    "start": "electron ."
+    "build": "electron-packager . ChromeCastPlayer --platform=darwin --arch=x64 --version=0.36.0 --overwrite --icon=Icon.icns",
+    "start": "electron .",
+    "test": "standard index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stephan281094/chromecast-player.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Stephan de Vries",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stephan281094/chromecast-player/issues"
   },
   "homepage": "https://github.com/stephan281094/chromecast-player#readme",
-  "devDependencies": {
-    "electron-packager": "^5.2.0",
-    "electron-prebuilt": "^0.36.1"
-  },
   "dependencies": {
     "menubar": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^5.2.0",
+    "electron-prebuilt": "^0.36.2",
+    "standard": "^5.4.1"
   }
 }
