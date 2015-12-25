@@ -1,7 +1,13 @@
-var volume = require('./volume')
+var player = require('chromecast-player')()
 
-var raiseVolume = document.querySelector('.raiseVolume')
-var lowerVolume = document.querySelector('.lowerVolume')
+player.attach(function(err, p) {
+  var pauseButton = document.querySelector('.pause')
+  var playButton  = document.querySelector('.play')
 
-raiseVolume.addEventListener('click', volume.raise)
-lowerVolume.addEventListener('click', volume.lower)
+  pauseButton.addEventListener('click', function() {
+    p.pause()
+  })
+  playButton.addEventListener('click', function() {
+    p.play()
+  })
+})
