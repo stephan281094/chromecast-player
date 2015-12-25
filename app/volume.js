@@ -1,9 +1,9 @@
 module.exports = {
   raise: function() {
-    console.log('raise volume');
+    console.log('raise volume')
   },
 
   lower: function() {
-    console.log('lower volume');
+    console.log('lower volume')
   }
-};
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "electron-packager . ChromeCastPlayer --platform=darwin --arch=x64 --version=0.36.0 --overwrite --icon=Icon.icns",
     "start": "electron .",
-    "test": "standard index.js"
+    "test": "standard index.js app/app.js"
   },
   "repository": {
     "type": "git",
