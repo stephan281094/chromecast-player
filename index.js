@@ -1,7 +1,10 @@
 var menubar = require('menubar');
 
-var mb = menubar();
-
-mb.on('ready', function ready() {
-  console.log('app is ready');
+var mb = menubar({
+  dir: __dirname + '/app',
+  width: 400,
+  height: 175,
+  icon: __dirname + '/app/Icon-Template.png',
+  preloadWindow: true,
+  'window-position': 'topRight'
 });
