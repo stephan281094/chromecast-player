@@ -2,9 +2,9 @@ var menubar = require('menubar')
 
 menubar({
   dir: __dirname + '/app',
-  width: 400,
-  height: 175,
+  width: 300,
+  height: 70,
   icon: __dirname + '/app/Icon-Template.png',
   preloadWindow: true,
-  'window-position': 'topRight'
+  'window-position': 'topCenter'
 })

@@ -1,3 +1,74 @@
-body {
-  background-color: #c00;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
+
+html, body {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  text-align: center;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  outline: 0;
+  color: #000;
+  display: inline-block;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.btn-audio {
+  transition: background-color .25s ease-in-out;
+  border: 2px solid #ccc;
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+
+.btn-audio:hover {
+  border-color: #c00;
+}
+
+.btn-audio:hover i {
+  color: #c00;
+}
+
+.btn-audio:active {
+  border-color: #000;
+}
+
+.btn-audio:active i {
+  color: #000;
+}
+
+.btn-audio i {
+  color: #ccc;
+}
+
+.play {
+  width: 48px;
+  height: 48px;
+  font-size: 15pt;
+  text-align: center;
+}
+
+i.fa-play { transform: translateX(2px); }
+i.fa-backward { transform: translateX(-1px); }
+i.fa-forward { transform: translateX(1px); }

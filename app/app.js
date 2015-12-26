@@ -2,17 +2,22 @@ var player = require('chromecast-player')()
 
 player.attach(function (err, p) {
   if (err) console.error('An error ocurred while attaching the player: ' + err)
-  var pauseButton = document.querySelector('.pause')
   var playButton = document.querySelector('.play')
-  var stopButton = document.querySelector('.stop')
+  var playButtonIcon = document.querySelector('.play i.fa');
 
-  pauseButton.addEventListener('click', function () {
-    p.pause()
-  })
   playButton.addEventListener('click', function () {
-    p.play()
-  })
-  stopButton.addEventListener('click', function () {
-    p.stop()
+    p.getStatus(function (err, status) {
+      if (status.playerState === 'PLAYING') {
+        p.pause(function () {
+          playButtonIcon.classList.remove('fa-play')
+          playButtonIcon.classList.add('fa-pause')
+        })
+      } else {
+        p.play(function () {
+          playButtonIcon.classList.remove('fa-pause')
+          playButtonIcon.classList.add('fa-play')
+        })
+      }
+    })
   })
 })

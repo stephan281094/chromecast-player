@@ -1,0 +1,16 @@
+{
+  "name": "chromecast-player",
+  "main": "index.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/stephan281094/chromecast-player",
+  "authors": [
+    "stephan281094 <stephan281094@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.5.0"
+  }
+}
