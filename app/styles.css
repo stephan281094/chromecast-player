@@ -13,62 +13,34 @@ html, body {
   user-select: none;
 }
 
-.wrapper {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  display: block;
-  text-align: center;
-}
-
-button {
-  margin: 0;
+.play {
   padding: 0;
-  background: #fff;
+  margin: 0;
   border: 0;
   outline: 0;
-  color: #000;
-  display: inline-block;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 100%;
+  font-size: 15pt;
+  background-color: transparent;
+  text-align: center;
   vertical-align: middle;
+  box-shadow: inset -1px 0 0 0 #ddd;
 }
 
-.btn-audio {
-  transition: background-color .25s ease-in-out;
-  border: 2px solid #ccc;
-  margin: 0 .5rem;
-  cursor: pointer;
-}
-
-.btn-audio:hover {
+.play:hover {
   border-color: #c00;
 }
 
-.btn-audio:hover i {
+.play i {
+  color: #333;
+}
+
+.play:hover i {
   color: #c00;
 }
 
-.btn-audio:active {
-  border-color: #000;
-}
-
-.btn-audio:active i {
+.play:active i {
   color: #000;
 }
 
-.btn-audio i {
-  color: #ccc;
-}
-
-.play {
-  width: 48px;
-  height: 48px;
-  font-size: 15pt;
-  text-align: center;
-}
-
 i.fa-play { transform: translateX(2px); }
-i.fa-backward { transform: translateX(-1px); }
-i.fa-forward { transform: translateX(1px); }
