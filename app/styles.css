@@ -27,20 +27,32 @@ html, body {
   box-shadow: inset -1px 0 0 0 #ddd;
 }
 
-.play:hover {
-  border-color: #c00;
-}
-
 .play i {
-  color: #333;
+  color: #888;
 }
 
-.play:hover i {
-  color: #c00;
-}
-
-.play:active i {
+.play:hover i, .play:active i {
   color: #000;
 }
 
 i.fa-play { transform: translateX(2px); }
+
+.wrapper {
+  display: flex;
+}
+
+.progress {
+  height: 50px;
+  -webkit-appearance: none;
+  border: none;
+  flex: 1;
+}
+
+.progress::-webkit-progress-bar {
+  background: transparent;
+}
+
+.progress::-webkit-progress-value {
+  background: #00cdaa;
+  opacity: 0.5;
+}
