@@ -5,6 +5,5 @@ menubar({
   width: 300,
   height: 50,
   icon: __dirname + '/app/Icon.png',
-  preloadWindow: true,
-  'window-position': 'topCenter'
+  preloadWindow: true
 })
