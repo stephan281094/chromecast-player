@@ -1,6 +1,7 @@
 var player = require('chromecast-player')()
+var ipcRenderer = require('electron').ipcRenderer
 
-window.onfocus = init
+ipcRenderer.on('show', init)
 
 function init () {
   player.attach(function (err, p) {
@@ -33,5 +34,3 @@ function init () {
     })
   })
 }
-
-init()
