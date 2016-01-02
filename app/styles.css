@@ -56,3 +56,15 @@ i.fa-play { transform: translateX(2px); }
   background: #00cdaa;
   opacity: 0.5;
 }
+
+.progress:after {
+  font-family: arial;
+  content: attr(data-time);
+  font-weight: 100;
+  color: #888;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  vertical-align: middle;
+}

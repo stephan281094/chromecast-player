@@ -31,6 +31,13 @@ function init () {
     // Update progress bar
     p.on('position', function () {
       progressBar.value = p.getProgress()
+      progressBar.dataset.time = getTimeByMilliseconds(p.getPosition())
     })
   })
+}
+
+function getTimeByMilliseconds (milliseconds) {
+  var date = new Date(milliseconds)
+
+  return date.getMinutes() + ':' + date.getSeconds()
 }
