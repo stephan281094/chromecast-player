@@ -5,10 +5,14 @@ ipcRenderer.on('show', init)
 
 function init () {
   player.attach(function (err, p) {
-    if (err) console.error('An error ocurred while attaching the player: ' + err)
     var playButton = document.querySelector('.play')
     var playButtonIcon = document.querySelector('.play i.fa')
     var progressBar = document.querySelector('.progress')
+
+    if (err) {
+      console.error('An error ocurred while attaching the player: ' + err)
+      progressBar.dataset.time = err
+    }
 
     // Pause or play
     playButton.addEventListener('click', function () {
